@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import os
-os.getenv()
+
+
 
 
 credit_df=pd.read_excel(r"C:\Users\admin\Desktop\NLP2SQL\credit products.xlsx")
@@ -16,7 +16,7 @@ tovar_codes=credit_df[credit_df['product_type']=='Товарный кредит'
 
 import openai  
 
-client_api = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY')) 
+client_api = openai.OpenAI(api_key=st.secrets['OPENAI_API_KEY']) 
 
 
 # Streamlit интерфейс
