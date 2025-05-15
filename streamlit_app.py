@@ -4,7 +4,7 @@ import pandas as pd
 
 
 
-credit_df=pd.read_excel(r"C:\Users\admin\Desktop\NLP2SQL\credit products.xlsx")
+credit_df=pd.read_excel(r"credit products.xlsx")
 
 
 zalog_codes=credit_df[credit_df['product_type']=='Залоговый кредит']['product_code'].to_list()
